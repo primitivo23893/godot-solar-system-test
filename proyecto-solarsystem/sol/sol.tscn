@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dthx1gqlaiu1n"]
+
+[ext_resource type="Script" uid="uid://bvfu63qvoeuda" path="res://sol/sol.gd" id="1_kmalp"]
+[ext_resource type="Texture2D" uid="uid://vbt2d4x85wjo" path="res://Original size/7.png" id="2_fjo54"]
+[ext_resource type="PackedScene" uid="uid://750fap34s44j" path="res://planeta/planeta.tscn" id="3_fjo54"]
+
+[node name="Sol" type="Node2D" unique_id=1367544321 node_paths=PackedStringArray("timer", "planetas")]
+rotation = -6.2831855
+script = ExtResource("1_kmalp")
+timer = NodePath("Sol/Timer")
+planetas = NodePath("Planetas")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=676173362]
+
+[node name="Sol" type="Sprite2D" parent="." unique_id=300637164]
+position = Vector2(-2.0000086, 43)
+scale = Vector2(0.69710284, 0.6971028)
+texture = ExtResource("2_fjo54")
+
+[node name="Timer" type="Timer" parent="Sol" unique_id=1301068293]
+wait_time = 10.0
+autostart = true
+
+[node name="Planetas" type="Node2D" parent="." unique_id=2017756568]
+
+[node name="Planeta1" parent="Planetas" unique_id=939115351 instance=ExtResource("3_fjo54")]
+position = Vector2(47.999947, 256.99994)
+scale = Vector2(0.34999996, 0.34999996)
+
+[node name="Planeta2" parent="Planetas" unique_id=1948003720 instance=ExtResource("3_fjo54")]
+position = Vector2(-50.54537, -204.21843)
+
+[node name="Planeta3" parent="Planetas" unique_id=823875594 instance=ExtResource("3_fjo54")]
+position = Vector2(-257.95032, -99.63747)

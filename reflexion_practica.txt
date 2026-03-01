@@ -1,0 +1,3 @@
+La realización de la actividad fue bastante sencilla, ya que tenia conocimentos previos de como utilizar el motor,
+utilice otra forma de instanciar las escenas, ya que no me gusta mucho la forma de arrastar y soltar, esto porque 
+hay situaciones en las que cambias los nombres de los archivos y tienes que cambiar todas las llamadas.
