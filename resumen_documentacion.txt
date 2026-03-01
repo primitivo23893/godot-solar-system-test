@@ -1,0 +1,10 @@
+Este proyecto es un sistema en 2D donde un grupo de planetas orbita alrededor de un sol central, mientras cada uno de ellos gira sobre su propio eje.
+
+Escena Principal (sol.tscn)
+Esta es la escena base del proyecto. Está conformada por un nodo raíz llamado "Sol" (Node2D) que incluye una cámara para visualizar la acción. Visualmente, el sol se representa con un Sprite2D que utiliza la imagen "7.png". El ritmo del sistema está controlado por un temporizador (Timer) configurado para durar 10 segundos y reiniciarse automáticamente. Además, cuenta con un contenedor llamado "Planetas" (Node2D) que agrupa las tres instancias de los planetas que orbitan.
+
+Escena del Planeta (planeta.tscn)
+Esta escena funciona como la plantilla para cada planeta individual. Su nodo raíz es un Node2D que reduce su tamaño general a una escala de 0.35. El aspecto visual se logra con un Sprite2D llamado "paneta" usando la imagen "29.png". También incluye un sistema de colisiones a través de un Area2D y un CollisionShape2D con forma de círculo, el cual tiene un radio de aproximadamente 161 píxeles para detectar interacciones.
+
+Lógica de Movimiento (sol.gd)
+Este script es el motor que da vida al sistema solar. Se conecta directamente al temporizador y al contenedor de los planetas. En cada fotograma, calcula el progreso actual dividiendo el tiempo restante del temporizador entre su tiempo total. Utilizando este porcentaje de avance, hace que el contenedor de los planetas rote progresivamente hasta dar una vuelta completa. Al mismo tiempo, el script recorre cada planeta por separado y los hace girar sobre su propio eje a una velocidad cuatro veces mayor que la de su órbita principal.
